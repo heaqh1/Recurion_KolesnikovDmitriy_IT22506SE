@@ -1,0 +1,10 @@
+def array_sum(arr, i):
+    if i == len(arr):
+        return 0
+
+    return arr[i] + array_sum(arr, i + 1)
+
+
+arr = [2, 4, 6, 8]
+
+print(array_sum(arr, 0))
