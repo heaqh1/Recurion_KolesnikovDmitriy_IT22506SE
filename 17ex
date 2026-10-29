@@ -1,0 +1,12 @@
+def permutations(text, current):
+    if len(text) == 0:
+        print(current)
+        return
+
+    for i in range(len(text)):
+        permutations(text[:i] + text[i + 1:], current + text[i])
+
+
+text = "ABC"
+
+permutations(text, "")
