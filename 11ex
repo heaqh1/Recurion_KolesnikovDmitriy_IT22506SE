@@ -1,0 +1,14 @@
+def count_occurrences(arr, x, i):
+    if i == len(arr):
+        return 0
+
+    if arr[i] == x:
+        return 1 + count_occurrences(arr, x, i + 1)
+
+    return count_occurrences(arr, x, i + 1)
+
+
+arr = [2, 5, 2, 8, 2, 9]
+x = 2
+
+print(count_occurrences(arr, x, 0))
