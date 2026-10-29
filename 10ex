@@ -1,0 +1,15 @@
+def find_max(arr, i):
+    if i == len(arr) - 1:
+        return arr[i]
+
+    max_value = find_max(arr, i + 1)
+
+    if arr[i] > max_value:
+        return arr[i]
+
+    return max_value
+
+
+arr = [4, 8, 2, 15, 7]
+
+print(find_max(arr, 0))
